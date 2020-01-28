@@ -9,17 +9,26 @@ article {
   margin: 0 auto;
 }
 article header {
-  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 150px;
   width: 95%;
   margin: 0 auto;
+  padding-top: 10px;
 }
+
 
 div.tweetText {
   width: 95%;
   margin: 0 auto;
+  height: 70px;
+  font-size: 1.1em;
+  font-weight: 700;
 }
 
 article footer {
+  display: flex;
   margin: 0 auto;
   background-color: #f4f1ec;
   border-bottom: none;
@@ -27,7 +36,13 @@ article footer {
   border-left: none;
   border-top: 4px solid #545149;
   height: 50px;
-  width: 95%
-
+  width: 95%;
+  font-size: 0.7em;
+  justify-content: space-between;
+  padding-top: 10px;
 }
 
+img.profile {
+  height: 50px;
+  vertical-align: middle;
+}

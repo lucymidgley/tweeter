@@ -10,7 +10,7 @@
   align-items: center;     
 }
 
-div {
+div.pic {
   position: relative;
   width: 300px;
   text-align: center;  

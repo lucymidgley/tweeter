@@ -33,7 +33,7 @@
         <h3><b>Write</b> a new tweet</h3>
       </nav>
       <header id="top">
-        <div>
+        <div class="pic">
             <img src="/images/profile-hex.png"> 
         </div>
         <br>
@@ -47,7 +47,7 @@
         <label for="text">Compose Tweet</label>
         <form action="/tweets" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <div>
+          <div class="new">
             <input type="submit" value="Tweet">
           <span class="counter">140</span>
           </div>   
@@ -56,11 +56,14 @@
       <section class="tweets">
         <article>
           <header>
-            <span>Isaac Newton</span>
-            <span>@SirIsaac</span>
+            <div>
+              <img class="profile" src="/images/Newton.png"> 
+              <span>Isaac Newton</span>
+            </div>
+            <span class="nameId">@SirIsaac</span>
             
           </header>
-          <div class="tweetText"> Here is some text</div>
+          <div class="tweetText"> Here is some text!</div>
           <footer>
             10 days ago
             <span>some symbols</span>
