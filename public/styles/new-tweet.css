@@ -1,0 +1,45 @@
+section {
+  margin: 1em 0;
+}
+
+label[for="text"]
+{
+    display:none;
+}
+textarea {
+  height:70px;
+  line-height:70px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 4px solid #545149;
+  width: 100%;
+  background-color: #f4f1ec;
+  resize: none;
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 1.1em;
+  vertical-align: middle;
+  color: #545149;
+}
+
+::placeholder {
+  opacity: 1;
+  color: #545149;
+}
+
+[type="submit"]{
+background-color: #4056A1;
+color: #ffffff;
+padding: 5px 10px;
+text-align: center;
+}
+
+section div {
+  width: 100%;
+  display: flex;
+  font-family: 'Bungee', cursive, sans-serif;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+
