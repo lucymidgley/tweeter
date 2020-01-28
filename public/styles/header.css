@@ -1,14 +1,13 @@
-header {
+#top {
   height: 400px;
   width: 100%;
   color: #ffffff ;
   background-color: #f2a203;
-background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-display: flex;           /* establish flex container */
-flex-direction: column;  /* make main axis vertical */
-justify-content: center; /* center items vertically, in this case */
-align-items: center;     /* center items horizontally, in this case */
-
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  display: flex;           
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center;     
 }
 
 div {
