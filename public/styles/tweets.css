@@ -12,10 +12,12 @@ article header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  height: 150px;
+  height: 130px;
   width: 95%;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 15px;
+  text-indent: 10px;
+
 }
 
 
@@ -24,7 +26,13 @@ div.tweetText {
   margin: 0 auto;
   height: 70px;
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 600;
+  text-indent: 10px;
+
+}
+
+span.nameId {
+  color: #9DE1E8
 }
 
 article footer {
@@ -40,9 +48,16 @@ article footer {
   font-size: 0.7em;
   justify-content: space-between;
   padding-top: 10px;
+  text-indent: 10px;
 }
 
 img.profile {
   height: 50px;
   vertical-align: middle;
+  padding-right: 5px;
+}
+
+div img.icons {
+  height: 30px;
+  width: 30px;
 }
