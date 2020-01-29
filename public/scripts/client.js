@@ -102,6 +102,8 @@ const getTweets = function() {
 getTweets();
    
 
+  
+
 
 $('#arrows').on('click', function(e) {
   e.preventDefault()

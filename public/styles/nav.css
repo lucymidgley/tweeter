@@ -24,3 +24,23 @@ nav img {
   top: 20px;
   right: 90px;
 }
+
+.moving {
+  animation-name: moving;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes moving {
+  from {
+    top: 20px;
+  }
+  to {
+    top: 30px;
+  }
+}
+
+
