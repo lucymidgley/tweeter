@@ -112,6 +112,7 @@ $('#arrows').on('click', function(e) {
     },
     500
   )
+  $('textarea').focus();
 })
 
 

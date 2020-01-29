@@ -23,6 +23,10 @@ textarea {
   color: #545149;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 ::placeholder {
   opacity: 1;
   color: #545149;
