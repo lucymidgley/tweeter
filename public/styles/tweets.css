@@ -1,12 +1,6 @@
-#tweets {
-  display: flex;
-  background-color: #f4f1ec;
-  color: #545149;
-  margin: 0 auto;
-}
 article {
   border: 4px solid #545149;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 article header {
   display: flex;
@@ -17,6 +11,7 @@ article header {
   margin: 0 auto;
   padding-top: 15px;
   text-indent: 10px;
+  opacity: 0.5;
 
 }
 
@@ -28,11 +23,13 @@ div.tweetText {
   font-size: 1.1em;
   font-weight: 600;
   text-indent: 10px;
+  opacity: 0.5;
 
 }
 
 span.nameId {
-  color: #9DE1E8
+  color: #d3d3d3;
+  opacity: 0;
 }
 
 article footer {
@@ -60,4 +57,12 @@ img.profile {
 div img.icons {
   height: 30px;
   width: 30px;
+}
+
+footer span {
+  opacity: 0.5;
+}
+
+footer div {
+  opacity: 0.5;
 }

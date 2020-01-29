@@ -24,6 +24,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script> 
+    <script type="text/javascript" src="/scripts/hover-tweet.js"></script> 
   </head>
 
   <body>
@@ -53,11 +54,11 @@
           </div>   
         </form>
       </section>
-      <section class="tweets">
+      <section id="tweets-container">
         <article>
           <header>
             <div>
-              <img class="profile" src="/images/Newton.png"> 
+              <img class="profile" src="https://i.imgur.com/73hZDYK.png"> 
               <span>Isaac Newton</span>
             </div>
             <span class="nameId">@SirIsaac</span>
@@ -65,7 +66,45 @@
           </header>
           <div class="tweetText"> Here is some text!</div>
           <footer>
-            10 days ago
+            <span>10 days ago</span>
+            <div class="symbols">
+              <img class="icons" src="/images/heart.png">
+              <img class="icons" src="/images/flag.png"> 
+              <img class="icons" src="/images/retweet.png"> 
+             </div>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <div>
+              <img class="profile" src="https://i.imgur.com/nlhLi3I.png"> 
+              <span>Marie Curie</span>
+            </div>
+            <span class="nameId">@Curie</span>
+            
+          </header>
+          <div class="tweetText"> Here is some text!</div>
+          <footer>
+            <span>10 days ago</span>
+            <div class="symbols">
+              <img class="icons" src="/images/heart.png">
+              <img class="icons" src="/images/flag.png"> 
+              <img class="icons" src="/images/retweet.png"> 
+             </div>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <div>
+              <img class="profile" src="https://i.imgur.com/73hZDYK.png"> 
+              <span>Isaac Newton</span>
+            </div>
+            <span class="nameId">@SirIsaac</span>
+            
+          </header>
+          <div class="tweetText"> Here is some text!</div>
+          <footer>
+            <span>10 days ago</span>
             <div class="symbols">
               <img class="icons" src="/images/heart.png">
               <img class="icons" src="/images/flag.png"> 
