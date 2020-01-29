@@ -32,7 +32,7 @@
     <!-- Top nav bar (fixed) -->
       <nav>
         <span>tweeter</span>
-        <h3><b>Write</b>  a new tweet <img src="/images/arrows.png"></h3>
+        <h3><b>Write</b>  a new tweet <img id="arrows" src="/images/arrows.png"></h3>
       </nav>
       <header id="top">
         <div class="pic">
@@ -47,7 +47,7 @@
     <main class="container">
       <section class="new-tweet">
         <label for="text">Compose Tweet</label>
-        <form action="/tweets" method="POST">
+        <form action="/tweets" method="POST" id="newTweet">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <div class="new">
             <input type="submit" id="submitBtn" value="Tweet">

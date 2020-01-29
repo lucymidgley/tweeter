@@ -101,7 +101,19 @@ const getTweets = function() {
 }
 getTweets();
    
-   
+
+
+$('#arrows').on('click', function(e) {
+  e.preventDefault()
+
+  $('html, body').animate(
+    {
+      scrollTop: $('#newTweet').offset().top - 120,
+    },
+    500
+  )
+})
+
 
 
 });
