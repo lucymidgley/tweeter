@@ -3,9 +3,23 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(function() {
   // --- our code goes here ---
   console.log("doc ready!");
+
+  const daysBetween = function(time) {
+  
+    const nowDate = new Date(Math.round((new Date()).getTime() / 1000)*1000);
+    const thenDate = new Date(time);
+    console.log(thenDate.toDateString());
+    console.log(nowDate.toDateString());
+  
+    var diff =(nowDate.getTime() - thenDate.getTime()) / (1000*60 * 60 * 24);
+    return Math.abs(Math.round(diff));
+   }
+  ;
+  
 
   const data = [
     {
@@ -18,7 +32,7 @@ $(document).ready(function() {
       "content": {
         "text": "If I have seen further it is by standing on the shoulders of giants"
       },
-      "created_at": 1461116232227
+      "created_at": 1575511781000
     },
     {
       "user": {
@@ -28,7 +42,7 @@ $(document).ready(function() {
       "content": {
         "text": "Je pense , donc je suis"
       },
-      "created_at": 1461113959088
+      "created_at": 1578190181000
     }
   ]
 
@@ -55,7 +69,7 @@ let $tweet = $(`<article>
 </header>
 <div class="tweetText">${tweet.content.text}</div>
 <footer>
-  <span>${tweet.created_at}</span>
+  <span>${daysBetween(tweet.created_at)} days ago</span>
   <div class="symbols">
     <img class="icons" src="/images/heart.png">
     <img class="icons" src="/images/flag.png"> 
@@ -67,10 +81,6 @@ console.log($tweet);
   return $tweet;
 
 }
-
-
-
-
 
 renderTweets(data);
 
