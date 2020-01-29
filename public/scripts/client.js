@@ -32,6 +32,15 @@ $(document).ready(function() {
     }
   ]
 
+  const renderTweets = function(tweets) {
+    for( const tweet of tweets){
+      $tweetElm = createTweetElement(tweet);
+      $('#tweets-container').append($tweetElm);
+    }
+    
+  }
+  
+
 const createTweetElement = function(tweet) {
   
 //console.log(markup);
@@ -61,12 +70,8 @@ console.log($tweet);
 
 
 
-const $tweet = createTweetElement(tweetData);
 
-// Test / driver code (temporary)
-//console.log($tweet); // to see what it looks like
-$('#tweets-container').append( $tweet );
-; // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
+renderTweets(data);
 
 });
