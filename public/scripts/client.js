@@ -16,7 +16,6 @@ $(document).ready(function() {
   
 
   const daysBetween = function(time) {
-  
     const nowDate = new Date(Math.round((new Date()).getTime() / 1000)*1000);
     const thenDate = new Date(time);
   
@@ -48,7 +47,7 @@ const createTweetElement = function(tweet) {
   </header>
   <div class="tweetText">${escape(tweet.content.text)}</div>
   <footer>
-    <span>${daysBetween(escape(tweet.created_at))} days ago</span>
+    <span>${escape(daysBetween(tweet.created_at))} days ago</span>
     <div class="symbols">
       <img class="icons" src="/images/heart.png">
       <img class="icons" src="/images/flag.png"> 
