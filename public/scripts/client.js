@@ -31,7 +31,6 @@ $(document).ready(function() {
   
 
 const createTweetElement = function(tweet) {
-  console.log(tweet);
   const $tweet = $(`<article>
   <header>
     <div>
@@ -61,16 +60,24 @@ const createTweetElement = function(tweet) {
     event.preventDefault();
     console.log('Button clicked, performimng ajax call...');
     const newData = $(this).serialize();
-    console.log(newData);
-    $.ajax({
-          url: '/tweets',
-          method: 'POST',
-          data: newData
-            }).then(function (createdTweet) {
+    if(newData.length === 5) {
+      alert("This form cannot be blank")
+    } else if(newData.length >= 145) {
+      alert("Tweet cannot surpass 140 characters")
+    } else {
+      $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: newData
+          }).then(function (createdTweet) {
+      
               $('textarea').val('');
-             getTweets(createdTweet);
-        
-          })
+           getTweets(createdTweet);
+
+            
+        })
+    }
+    
 });
 
 

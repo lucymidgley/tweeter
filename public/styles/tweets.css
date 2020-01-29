@@ -27,6 +27,7 @@ div.tweetText {
   height: 70px;
   font-weight: 600;
   margin: 0 30px;
+  word-wrap: break-word;
 
 }
 
