@@ -56,26 +56,26 @@ $(document).ready(function() {
 const createTweetElement = function(tweet) {
   
 //console.log(markup);
-let $tweet = $(`<article>
-<header>
-  <div>
-    <img class="profile" src=${tweet.user.avatars}> 
-    <span>${tweet.user.name}</span>
-  </div>
-  <span class="nameId">${tweet.user.handle}</span>
-  
-</header>
-<div class="tweetText">${tweet.content.text}</div>
-<footer>
-  <span>${daysBetween(tweet.created_at)} days ago</span>
-  <div class="symbols">
-    <img class="icons" src="/images/heart.png">
-    <img class="icons" src="/images/flag.png"> 
-    <img class="icons" src="/images/retweet.png"> 
-   </div>
-</footer>
-</article>`).addClass('tweet');
-  return $tweet;
+  const $tweet = $(`<article>
+  <header>
+    <div>
+      <img class="profile" src=${tweet.user.avatars}> 
+      <span>${tweet.user.name}</span>
+    </div>
+    <span class="handler">${tweet.user.handle}</span>
+    
+  </header>
+  <div class="tweetText">${tweet.content.text}</div>
+  <footer>
+    <span>${daysBetween(tweet.created_at)} days ago</span>
+    <div class="symbols">
+      <img class="icons" src="/images/heart.png">
+      <img class="icons" src="/images/flag.png"> 
+      <img class="icons" src="/images/retweet.png"> 
+    </div>
+  </footer>
+  </article>`).addClass('tweet');
+    return $tweet;
 
 }
 

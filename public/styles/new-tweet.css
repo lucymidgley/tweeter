@@ -4,7 +4,7 @@ section {
 
 label[for="text"]
 {
-    display:none;
+    display: none;
 }
 textarea {
   height:70px;
@@ -29,10 +29,10 @@ textarea {
 }
 
 [type="submit"]{
-background-color: #4056A1;
-color: #ffffff;
-padding: 5px 10px;
-text-align: center;
+  background-color: #4056A1;
+  color: #ffffff;
+  padding: 5px 10px;
+  text-align: center;
 }
 
 section div.new {
