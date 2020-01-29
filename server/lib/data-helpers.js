@@ -26,14 +26,3 @@ module.exports = function makeDataHelpers(db) {
   };
 }
 
-const daysBetween = function(time) {
-  
-  const nowDate = new Date(Math.round((new Date()).getTime() / 1000)*1000);
-  const thenDate = new Date(time);
-
-  var diff =(nowDate.getTime() - thenDate.getTime()) / (1000*60 * 60 * 24);
-  return Math.abs(Math.round(diff));
- }
-;
-
-module.exports = daysBetween;

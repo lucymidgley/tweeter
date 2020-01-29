@@ -7,6 +7,7 @@
 $(document).ready(function() {
   // --- our code goes here ---
   console.log("doc ready!");
+  
 
   const daysBetween = function(time) {
   
@@ -17,34 +18,10 @@ $(document).ready(function() {
     return Math.abs(Math.round(diff));
    }
   ;
-  
-
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1575511781000
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1578190181000
-    }
-  ]
+ 
 
   const renderTweets = function(tweets) {
+    $('#tweets-container').empty();
     for( const tweet of tweets){
       $tweetElm = createTweetElement(tweet);
       $('#tweets-container').append($tweetElm);
@@ -54,8 +31,7 @@ $(document).ready(function() {
   
 
 const createTweetElement = function(tweet) {
-  
-//console.log(markup);
+  console.log(tweet);
   const $tweet = $(`<article>
   <header>
     <div>
@@ -79,6 +55,45 @@ const createTweetElement = function(tweet) {
 
 }
 
-renderTweets(data);
+
+
+  $('form').on('submit', function (event) {
+    event.preventDefault();
+    console.log('Button clicked, performimng ajax call...');
+    const newData = $(this).serialize();
+    console.log(newData);
+    $.ajax({
+          url: '/tweets',
+          method: 'POST',
+          data: newData
+            }).then(function (createdTweet) {
+              $('textarea').val('');
+             getTweets(createdTweet);
+        
+          })
+});
+
+
+
+
+
+const getTweets = function() {
+  $.ajax({
+    url: '/tweets',
+    method: 'GET'
+      }).then(function (data) {
+        renderTweets(data)
+  
+    })
+}
+getTweets();
+   
+   
+
 
 });
+
+// data: $('form').serialize(),
+//           success: function () {
+//             alert('form was submitted');
+//           }
