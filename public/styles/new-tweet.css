@@ -2,6 +2,10 @@ section {
   margin: 1em 0;
 }
 
+#newTweet {
+  display: none;
+}
+
 label[for="text"]
 {
     display: none;

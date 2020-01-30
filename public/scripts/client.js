@@ -22,7 +22,7 @@ $(document).ready(function() {
       $("#error-msg-too-many-char").slideDown();
       $('textarea').focus();
     } else {
-      $('.counter').text('0');
+      $('.counter').text('140');
       postTweets(newData);
     }
     
@@ -44,12 +44,11 @@ $(document).ready(function() {
   $('#arrows').on('click', function(e) {
     e.preventDefault();
 
-    $('html, body').animate(
-      {
-        scrollTop: $('#newTweet').offset().top - 120,
-      },
-      500
-    );
+    if($('#newTweet').is(":visible")) {
+      $('#newTweet').slideUp();
+    }else{
+      $('#newTweet').slideDown();
+    }
     $('textarea').focus();
   });
 
