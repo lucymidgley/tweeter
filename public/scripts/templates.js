@@ -18,6 +18,6 @@ const createTweetElement = function(tweet) {
     </div>
   </footer>
   </article>`).addClass('tweet');
-    return $tweet;
+  return $tweet;
 
-}
+};
