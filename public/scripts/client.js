@@ -66,7 +66,7 @@ $(document).ready(function() {
 
   $(document).scroll(function() {
     let y = $(this).scrollTop();
-    if (y > 500) {
+    if (y > 400) {
       $('#arrowUp').show();
       $('nav h3').hide();
     } else {
