@@ -23,7 +23,7 @@ $(document).ready(function() {
    
 
   $('#arrows').on('mouseover', function() {
-    $(this).attr("src", "/images/arrowsBlue.png");
+    $(this).attr("src", "/images/arrows-blue.png");
     $(this).addClass('moving');
   });
 

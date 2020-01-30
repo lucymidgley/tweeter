@@ -1,19 +1,17 @@
 #top {
-  height: 400px;
-  width: 100%;
-  color: #ffffff ;
-  background-color: #d1005e;
-  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
-  display: flex;           
-  flex-direction: column;  
-  justify-content: center; 
-  align-items: center;     
+	height: 400px;
+	width: 100%;
+	color: #ffffff;
+	background-color: #d1005e;
+	background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #top div.pic {
-  width: 300px;
-  text-align: center;  
-  font-size: 1.5em;
+	width: 300px;
+	text-align: center;
+	font-size: 1.5em;
 }
-
-
