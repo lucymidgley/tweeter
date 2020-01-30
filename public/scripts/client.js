@@ -44,10 +44,10 @@ $(document).ready(function() {
   $('#arrows').on('click', function(e) {
     e.preventDefault();
 
-    if($('#newTweet').is(":visible")) {
-      $('#newTweet').slideUp();
-    }else{
+    if($('#newTweet').is(":hidden")) {
       $('#newTweet').slideDown();
+    }else{
+      $('#newTweet').slideUp();
     }
     $('textarea').focus();
   });
@@ -77,6 +77,8 @@ $(document).ready(function() {
       $('nav h3').show();
     }
   });
+
+  
 
 
 

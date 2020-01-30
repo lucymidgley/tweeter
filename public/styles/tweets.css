@@ -8,6 +8,15 @@ article:hover {
   box-shadow: 10px 10px 10px #555;
   opacity: 1;
 }
+
+article:hover div img.icons {
+  display: inline-block;
+}
+
+article:hover span.handler {
+  display: inline-block;
+}
+
 article header {
   display: flex;
   justify-content: space-between;
@@ -33,6 +42,7 @@ div.tweetText {
 
 span.handler {
   color: #D1D7D5;
+  display: none;
 }
 
 
@@ -62,6 +72,7 @@ img.profile {
 div img.icons {
   height: 30px;
   width: 30px;
+  display: none;
 }
 
 #arrowUp {
