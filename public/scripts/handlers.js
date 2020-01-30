@@ -2,7 +2,7 @@ const renderTweets = function(tweets) {
   $('#tweets-container').empty();
   for (const tweet of tweets) {
     $tweetElm = createTweetElement(tweet);
-    $('#tweets-container').append($tweetElm);
+    $('#tweets-container').prepend($tweetElm);
   }
   
 };
