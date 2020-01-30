@@ -63,23 +63,17 @@ const createTweetElement = function(tweet) {
 
   $('form').on('submit', function (event) {
     event.preventDefault();
-    $("#error-msg-no-char").slideUp( function()
-       {
-        
-      });
+    $("#error-msg-no-char").slideUp();
       $("#error-msg-too-many-char").slideUp( 1000, function() {
       });
       $('textarea').focus();
     console.log('Button clicked, performimng ajax call...');
     const newData = $(this).serialize();
     if(newData.length === 5) {
-      $("#error-msg-no-char").slideDown( function()
-       {
-      });
+      $("#error-msg-no-char").slideDown();
       $('textarea').focus();
     } else if(newData.length >= 145) {
-      $("#error-msg-too-many-char").slideDown( 1000, function() {
-      });
+      $("#error-msg-too-many-char").slideDown();
       $('textarea').focus();
     } else {
       $('.counter').text('0')
@@ -119,6 +113,10 @@ $('#arrows').on('mouseover', function() {
  $(this).addClass( 'moving' );
 })
 
+$('#arrowUp').on('mouseover', function() {
+  $(this).addClass( 'moving' );
+ })
+
 
 $('#arrows').on('click', function(e) {
   e.preventDefault()
@@ -131,6 +129,29 @@ $('#arrows').on('click', function(e) {
   )
   $('textarea').focus();
 })
+
+$('#arrowUp').on('click', function(e) {
+  e.preventDefault()
+
+  $('html, body').animate(
+    {
+      scrollTop: $('#newTweet').offset().top - 120,
+    },
+    500
+  )
+  $('textarea').focus();
+})
+
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 500) {
+    $('#arrowUp').show();
+    $('nav h3').hide();
+  } else {
+    $('#arrowUp').hide();
+    $('nav h3').show();
+  }
+});
 
 
 
