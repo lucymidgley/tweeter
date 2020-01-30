@@ -73,8 +73,8 @@ div img.icons {
   display: none;
 }
 
-.moving {
-  animation-name: moving;
+.movingBottomArrow {
+  animation-name: movingUpDownBA;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -82,7 +82,7 @@ div img.icons {
 }
 
 
-@keyframes moving {
+@keyframes movingUpDownBA {
   from {
     bottom: 20px;
   }

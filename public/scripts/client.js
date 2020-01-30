@@ -114,7 +114,7 @@ $('#arrows').on('mouseover', function() {
 })
 
 $('#arrowUp').on('mouseover', function() {
-  $(this).addClass( 'moving' );
+  $(this).addClass( 'movingBottomArrow' );
  })
 
 
