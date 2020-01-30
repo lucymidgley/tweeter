@@ -114,9 +114,11 @@ const getTweets = function() {
 getTweets();
    
 
-$('#arrows').on('mouseover', function(e) {
-  $(this).addClass( 'moving' );
+$('#arrows').on('mouseover', function() {
+ $(this).attr("src", "/images/arrowsBlue.png")
+ $(this).addClass( 'moving' );
 })
+
 
 $('#arrows').on('click', function(e) {
   e.preventDefault()

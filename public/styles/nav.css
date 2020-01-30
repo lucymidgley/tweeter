@@ -17,13 +17,14 @@ nav span {
   font-size: 1.5em;
 }
 
-nav img {
-  height: 10px;
-  width: 10px;
+#arrows {
+  height: 20px;
+  width: 20px;
   position: relative;
-  top: 20px;
+  top: 24px;
   right: 90px;
 }
+
 
 .moving {
   animation-name: moving;
@@ -36,10 +37,10 @@ nav img {
 
 @keyframes moving {
   from {
-    top: 20px;
+    top: 24px;
   }
   to {
-    top: 30px;
+    top: 34px;
   }
 }
 
