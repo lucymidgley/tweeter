@@ -63,13 +63,26 @@ const createTweetElement = function(tweet) {
 
   $('form').on('submit', function (event) {
     event.preventDefault();
+    $("#error-msg-no-char").slideUp( function()
+       {
+        
+      });
+      $("#error-msg-too-many-char").slideUp( 1000, function() {
+      });
+      $('textarea').focus();
     console.log('Button clicked, performimng ajax call...');
     const newData = $(this).serialize();
     if(newData.length === 5) {
-      alert("This form cannot be blank")
+      $("#error-msg-no-char").slideDown( function()
+       {
+      });
+      $('textarea').focus();
     } else if(newData.length >= 145) {
-      alert("Tweet cannot surpass 140 characters")
+      $("#error-msg-too-many-char").slideDown( 1000, function() {
+      });
+      $('textarea').focus();
     } else {
+      $('.counter').text('0')
       $.ajax({
         url: '/tweets',
         method: 'POST',
@@ -101,8 +114,9 @@ const getTweets = function() {
 getTweets();
    
 
-  
-
+$('#arrows').on('mouseover', function(e) {
+  $(this).addClass( 'moving' );
+})
 
 $('#arrows').on('click', function(e) {
   e.preventDefault()
@@ -120,7 +134,3 @@ $('#arrows').on('click', function(e) {
 
 });
 
-// data: $('form').serialize(),
-//           success: function () {
-//             alert('form was submitted');
-//           }

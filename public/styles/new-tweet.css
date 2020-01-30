@@ -47,3 +47,27 @@ section div.new {
   font-size: 0.8em;
 }
 
+#error-msg-no-char {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #D8000C;
+  background-color: #FFBABA;
+  display: none;
+}
+
+#error-msg-too-many-char {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #D8000C;
+  background-color: #FFBABA;
+  display: none;
+}
+
+#errorIcon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 2px;
+}

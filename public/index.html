@@ -23,9 +23,10 @@
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script> 
     <script type="text/javascript" src="/scripts/hover-tweet.js"></script> 
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script> 
+    
     
   </head>
 
@@ -33,7 +34,7 @@
     <!-- Top nav bar (fixed) -->
       <nav>
         <span>tweeter</span>
-        <h3><b>Write</b>  a new tweet <img id="arrows" class="moving" src="/images/arrows.png"></h3>
+        <h3><b>Write</b>  a new tweet <img id="arrows" src="/images/arrows.png"></h3>
       </nav>
       <header id="top">
         <div class="pic">
@@ -47,6 +48,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="error-msg-no-char">
+          <img id="errorIcon" src="/images/error.png"> 
+          This form cannot be blank!
+        </div>
+        <div id="error-msg-too-many-char">
+          <img id="errorIcon" src="/images/error.png"> 
+          Character limit cannot exceed 140!
+        </div>
         <label for="text">Compose Tweet</label>
         <form action="/tweets" method="POST" id="newTweet">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
