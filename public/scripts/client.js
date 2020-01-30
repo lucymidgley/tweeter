@@ -54,6 +54,9 @@ $(document).ready(function() {
 
   $('#arrowUp').on('click', function(e) {
     e.preventDefault();
+    if($('#newTweet').is(":hidden")) {
+      $('#newTweet').slideDown();
+    }
 
     $('html, body').animate(
       {
