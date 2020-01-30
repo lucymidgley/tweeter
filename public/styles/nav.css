@@ -1,6 +1,6 @@
 nav {
   display: flex;
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 120px;
   width: 100vw;
@@ -8,8 +8,6 @@ nav {
   padding: 1.5em;
   z-index: 1;
   justify-content: space-between;
-  background-color: #d1005e;
-  background-image: url(https://www.transparenttextures.com/patterns/diagmonds-light.png);
 }
 
 nav span {

@@ -1,13 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function() {
-  // --- our code goes here ---
-  console.log("doc ready!");
-
   $('form').on('submit', function(event) {
     event.preventDefault();
     $("#error-msg-no-char").slideUp();
