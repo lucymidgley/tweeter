@@ -1,14 +1,10 @@
-console.log("file loaded");
 $(document).ready(function() {
-  // --- our code goes here ---
-  console.log("doc ready!");
-
-  $('textarea').on("keyup", function() {
-    const currentLength = 140 - $(this).val().length;
+  $('textarea').on("keyup", function() { //listen for keyup
+    const currentLength = 140 - $(this).val().length; //test for length of input, subtract this value from 140
     if (currentLength <= 0) {
-      $(this).closest("form").find(".counter").css('color', 'red').text(currentLength);
+      $(this).closest("form").find(".counter").css('color', 'red').text(currentLength); //check length
     } else {
-      $(this).closest("form").find(".counter").css('color', ' #545149').text(currentLength);
+      $(this).closest("form").find(".counter").css('color', ' #545149').text(currentLength); //change colour if >140 char
     }
   });
 });

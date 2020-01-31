@@ -1,12 +1,12 @@
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-*,
-*:before,
-*:after {
-	box-sizing: inherit;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
+/*
+ * Global layouts
+ */
 
 body {
 	color: #545149;

@@ -1,7 +1,6 @@
 nav {
 	display: flex;
 	position: fixed;
-	top: 0;
 	height: 120px;
 	width: 100vw;
 	color: #ffffff;
@@ -22,8 +21,9 @@ nav span {
 	top: 24px;
 	right: 90px;
 }
+/* moving animation for arrows in nav bar, infinitely bounces up and down once activated*/
 
-.moving {
+.moving {  
 	animation-name: moving;
 	animation-duration: 1s;
 	animation-timing-function: linear;
